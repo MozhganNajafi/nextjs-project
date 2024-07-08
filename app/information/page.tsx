@@ -1,4 +1,5 @@
 'use client';
+import { Suspense } from 'react';
 import { Container, HStack, ListItem, UnorderedList, Image, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
 import ApolloProviderWrapper from '@/lib/ApolloProvider';
 import { Character } from './intefaces';
@@ -56,7 +57,6 @@ const InformationPage = () => {
 
   // Function to handle pagination and navigate to the selected information page
   const paginationHandler = (newPageNumber: number) => {
-
     const url = new URL(window.location.href);
     url.searchParams.set('page', newPageNumber.toString());
     router.push(url.pathname + url.search);
@@ -111,7 +111,9 @@ const InformationPage = () => {
 
 const WrappedInformationPage = () => (
   <ApolloProviderWrapper>
-    <InformationPage />
+    <Suspense fallback={<div>Loading...</div>}>
+      <InformationPage />
+    </Suspense>
   </ApolloProviderWrapper>
 );
 
