@@ -1,8 +1,9 @@
 'use client';
+
 import { Suspense } from 'react';
 import { Container, HStack, ListItem, UnorderedList, Image, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
 import ApolloProviderWrapper from '@/lib/ApolloProvider';
-import { Character } from './intefaces';
+import { Character } from './interfaces';
 import { getCharacters } from '@/lib/characterQueries';
 import { useEffect, useState } from 'react';
 import DetailModal from '@/components/modal/modal';
