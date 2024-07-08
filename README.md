@@ -15,8 +15,9 @@ The first page is used for User details (Username & Job title) and serves as the
 
 The second page is defined to provide users a place to view their details in full and also edit them. [http://localhost:3000/profile](http://localhost:3000/profile)
 
-The third page displays a list of paginated character information including their image. [http://localhost:3000/information?page=1](http://localhost:3000/information?page=1)
+The third page displays a list of paginated character information including their image. [http://localhost:3000/information?page=1](http://localhost:3000/information?page=1).
 
+The list in the information page is being populated using the The Rick and Morty Graphql API https://rickandmortyapi.com/graphql
 ## Getting Started
 When running the project for the first time you will need to do the following in order for it to get up and running.
 
